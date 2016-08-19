@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FakeAPI.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,14 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)fetch:(id)sender {
+    [[FakeAPI new] fetch];
 }
+
+- (IBAction)fetchWithColor:(id)sender {
+    [[FakeAPI new] fetchWithColor];
+}
+
 
 @end
